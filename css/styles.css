@@ -1,0 +1,167 @@
+@import url('reset.css');
+@import url('fonts.css');
+
+a,
+span,
+p,
+div,
+button {
+  font-family: 'RobotoRegular';
+}
+
+
+.wrap {
+  width: 100vw;  
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #F7EABF;
+  height: 100vh;
+  padding: 20px;
+}
+
+/*=====================*/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.logo-ico {
+  background-color: #8D79A6;
+  color: #fff;
+  font-weight: 900;
+  width: 50px;
+  height: 50px;
+  padding: 18px 5px;
+  border-radius: 5px;
+  border: 1px solid #664B89;
+}
+
+.logo-ico:hover {
+  cursor: pointer;
+}
+
+.cart-button {
+  display: block;
+  color: #fff;
+  background-color: #8BA2B6;
+  text-transform: uppercase;
+  letter-spacing: 1.25;
+  font-size: 14px;
+  border: none;
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;  
+}
+
+.cart-button:hover {
+  background-color: #476782;
+  cursor: pointer;
+}
+
+/*=====================*/
+
+.main {
+  width: 100%;
+}
+
+.topline {
+  padding: 0 25px;
+}
+
+.h1 {
+  display: block;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #476782;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.h2 {
+  color: #476782;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.goods-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 25px;
+}
+
+.goods-list__item {
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #90A5B6;
+  border-radius: 5px;
+  margin: 10px 24px;
+  max-width: 174px;
+}
+
+.goods-list__item:hover {
+  cursor: pointer;
+  border: 2px solid #664B89;
+  transition: 0.5s;
+}
+
+.item-img {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+}
+
+.item-dscr {
+  margin: 16px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 36px;
+}
+
+.item-name {
+  font-size: 16px;
+  line-height: 18px;
+  color: #90A5B6;
+}
+
+.space {
+  height: 100%;
+  width: 10px;
+}
+
+.item-price {
+  color: brown;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+.item-btn {  
+  color: #000;
+  font-weight: 700;
+  background-color: #fff;
+  text-transform: uppercase;  
+  font-size: 12px;
+  border: 2px solid #90A5B6;
+  width: 90px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.item-btn:hover {
+  cursor: pointer;
+  background-color: #664B89;
+  border: 2px solid #664B89;
+  transition: 0.2s;
+  color: #fff;
+}
