@@ -13,7 +13,7 @@ const goods = [
   { title: 'Поло', price: 1150 },
 ];
 
-const renderGoodsItem = (title, price) => {
+const renderGoodsItem = (title = 'без имени', price = '') => {
     return `<div class="goods-list__item">
               <div class="item-img"></div>
               <div class="item-dscr">
