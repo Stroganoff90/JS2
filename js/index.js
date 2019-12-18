@@ -1,6 +1,6 @@
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
-function makeGETRequest(url, callback) {
+function makeGETRequest(url) {
   return new Promise(function(resolve, reject) {
       let xhr = new XMLHttpRequest(); 
 
@@ -16,8 +16,8 @@ function makeGETRequest(url, callback) {
 
       xhr.onreadystatechange = function () {
           if (xhr.readyState === 4 && xhr.status === 200) {
-              const body = JSON.parse(xhr.responseText);
-              callback(body);
+              const body = JSON.parse(xhr.responseText);              
+              resolve(body);
           }
       };
 
@@ -52,15 +52,23 @@ class GoodsList {
     constructor() {
         this.goods = [];
     }
-  
-    fetchGoods(cb)  {
-      makeGETRequest(`${API_URL}/catalogData.json`, (goods) => {
-          this.goods = goods;
-          cb();
-      });
-    }
-    // на случай крашнутого джейсона
-    
+
+    fetchGoods() {
+      let promise = new Promise ( function(resolve, reject) {
+        resolve( makeGETRequest(`${API_URL}/catalogData.json`)
+          // .then((goods) => {
+          //   // this.goods = goods;
+          //   console.log(goods.response);
+          // })
+
+
+        );
+        
+        reject(new Error("…"))
+      }); 
+    }    
+
+  // на случай крашнутого джейсона
   //   fetchGoods()  {
   //       this.goods = [
   //       { title: 'Шорты', price: 350 },
