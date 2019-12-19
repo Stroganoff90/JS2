@@ -51,22 +51,15 @@ class GoodsItem {
 class GoodsList {
     constructor() {
         this.goods = [];
-    }
-
-    fetchGoods() {
-      let promise = new Promise ( function(resolve, reject) {
-        resolve( makeGETRequest(`${API_URL}/catalogData.json`)
-          // .then((goods) => {
-          //   // this.goods = goods;
-          //   console.log(goods.response);
-          // })
-
-
-        );
-        
-        reject(new Error("…"))
-      }); 
     }    
+
+    fetchGoods(goods) {
+      return new Promise((resolve) => {
+        makeGETRequest(`${API_URL}/catalogData.json`); {
+          resolve(goods)          
+        }        
+      })      
+    }
 
   // на случай крашнутого джейсона
   //   fetchGoods()  {
